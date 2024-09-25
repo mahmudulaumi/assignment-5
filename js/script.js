@@ -7,6 +7,23 @@ document.getElementById('donationBtn').addEventListener('click', () => {
   document.getElementById('historySection').style.display = 'none';
 });
 
+function showSectionById(id){
+  document.getElementById('donation-number').classList.add('hidden')
+  document.getElementById('history-number').classList.add('hidden')
+
+  document.getElementById(id).classList.remove('hidden');
+
+}
+
+document.getElementById('donationBtn').addEventListener('click',function(){
+  showSectionById('donation-number')
+});
+
+document.getElementById('historyBtn').addEventListener('click',function(){
+  showSectionById('history-number')
+});
+
+
 function toggleButton(activeButton) {
     const donationBtn = document.getElementById('donationBtn');
     const historyBtn = document.getElementById('history');
