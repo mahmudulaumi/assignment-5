@@ -7,6 +7,38 @@ document.getElementById('donationBtn').addEventListener('click', () => {
   document.getElementById('historySection').style.display = 'none';
 });
 
+function toggleButton(activeButton) {
+    const donationBtn = document.getElementById('donationBtn');
+    const historyBtn = document.getElementById('historyBtn');
+    const donationSection = document.getElementById('donationSection');
+    const historySection = document.getElementById('historySection');
+
+    if (activeButton === 'donation') {
+        // Toggle button styles
+        donationBtn.classList.add('active');
+        donationBtn.classList.remove('inactive');
+        historyBtn.classList.add('inactive');
+        historyBtn.classList.remove('active');
+        
+        // Show donation section, hide history section
+        donationSection.style.display = 'block';
+        historySection.style.display = 'none';
+
+        // If you want to link to a different page, you can use the window.location.href
+        // window.location.href = 'donation-page-url.html'; // Uncomment this to link to donation page
+    } 
+    else {
+        // Toggle button styles
+        historyBtn.classList.add('active');
+        historyBtn.classList.remove('inactive');
+        donationBtn.classList.add('inactive');
+        donationBtn.classList.remove('active');
+
+        // Show history section, hide donation section
+        historySection.style.display = 'block';
+        donationSection.style.display = 'none';
+    }
+}     
 document.getElementById('historyBtn').addEventListener('click', () => {
   document.getElementById('donationSection').style.display = 'none';
   document.getElementById('historySection').style.display = 'block';
