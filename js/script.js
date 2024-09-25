@@ -9,7 +9,7 @@ document.getElementById('donationBtn').addEventListener('click', () => {
 
 function toggleButton(activeButton) {
     const donationBtn = document.getElementById('donationBtn');
-    const historyBtn = document.getElementById('historyBtn');
+    const historyBtn = document.getElementById('history');
     const donationSection = document.getElementById('donationSection');
     const historySection = document.getElementById('historySection');
 
@@ -89,7 +89,7 @@ function addToHistory(donationName, donationAmount) {
     const donationSection = document.getElementById('donationSection');
     const historySection = document.getElementById('historySection');
 
-    donationBtn.addEventListener('click', (){
+    donationBtn.addEventListener('click', ()=>{
       
       donationSection.classList.remove('hidden');
       historySection.classList.add('hidden');
@@ -101,7 +101,7 @@ function addToHistory(donationName, donationAmount) {
       historyBtn.classList.add('bg-white', 'border', 'border-gray-300', 'text-gray-600');
     });
 
-    historyBtn.addEventListener('click', (){
+    historyBtn.addEventListener('click', ()=>{
      
       historySection.classList.remove('hidden');
       donationSection.classList.add('hidden');
